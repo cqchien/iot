@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.create-question-form {
+  margin-top: 60px;
+}
+
+.form-space {
+  margin-bottom: 28px;
+}
+
+.option-bound {
+  background-color: #e3e8f0;
+  border-radius: 0.25rem;
+}
+
+.form-check-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: black !important;
+}
+
+.form-control {
+  border-radius: unset !important;
+}
+
+.add-option-button {
+  background-color: inherit;
+  border-style: dashed;
+  border-width: 1px;
+}
+.add-option-button:hover {
+  background-color: rgb(209, 250, 229);
+}
+
+.form-control:focus {
+  border: none;
+  box-shadow: none !important;
+}
+
+.nav-title {
+  --tw-text-opacity: 1;
+  color: rgba(16, 185, 129, var(--tw-text-opacity)) !important;
+}
+
+.custom-sidebar {
+  /* width: 200px !important; */
+  font-size: 0.875rem !important;
+  line-height: 1.25rem;
+}
+
+.sidebar:not(.sidebar-end) ~ * {
+  --cui-sidebar-occupy-start: 200px !important;
+}
+
+@media (min-width: 768px) {
+  .sidebar.hide:not(.sidebar-end) ~ * {
+    --cui-sidebar-occupy-start: 0 !important;
+  }
+}
+
+.sidebar {
+  --cui-sidebar-width: 200px !important;
+}
+
+.sidebar-narrow-unfoldable:not(.sidebar-end) ~ * {
+  --cui-sidebar-occupy-start: 4rem !important;
+}
+
+.sidebar-nav .nav-link.active,
+.sidebar-nav .nav-group.show .nav-group-toggle {
+  --tw-text-opacity: 1;
+  color: rgba(52, 211, 153, var(--tw-text-opacity)) !important;
+}
+
+/* Common */
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgba(52, 211, 153, var(--tw-text-opacity));
+}
+
+.h-100px {
+  height: 100px;
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity)) !important;
+}
+
+.bg-green-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+}
+
+.border-green-300 {
+  --tw-border-opacity: 1;
+  border-color: rgba(110, 231, 183, var(--tw-border-opacity));
+}
+
+.iot-thing {
+  width: 100px;
+  height: 150px;
+  margin-right: 50px;
+}
