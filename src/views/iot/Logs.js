@@ -17,24 +17,24 @@ export default function Logs() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
-
     // const getData = async () => {
-    //   const apiResponse = await axios.get(process.env.REACT_APP_API + "/iot/sensors");
+    //   const apiResponse = await axios.get("https://yomusic-api.herokuapp.com/iot/sensors");
     //   if (apiResponse.status === 200) {
-    //     setData(apiResponse.data);
+    //     setData(apiResponse.data);  
     //   }
     //   setLoading(false);
+  // }
+    // getData()
+    setLoading(true);
 
-    // }
-    let interval = setInterval(async () => {
-      const apiResponse = await axios.get(process.env.REACT_APP_API + "/iot/sensors");
-            if (apiResponse.status === 500) {
+    const interval = setInterval(async () => {
+
+      const apiResponse = await axios.get("https://yomusic-api.herokuapp.com/iot/sensors");
+      if (apiResponse.status === 200) {
         setData(apiResponse.data);
       }
-            setLoading(false);
+      setLoading(false);
     }, 2000);
-
 
     return () => {
       clearInterval(interval);
@@ -66,7 +66,7 @@ export default function Logs() {
                       <CTableDataCell className="text-center">{item.sensorName}</CTableDataCell>
                       <CTableDataCell>{item.sensorType}</CTableDataCell>
                       <CTableDataCell className="text-center">{item.value}</CTableDataCell>
-                        <CTableDataCell className="text-center">{item.updatedAt ? moment(item.updatedAt).format('DD/MM/YYYY HH:mm'): "---"}</CTableDataCell>
+                      <CTableDataCell className="text-center">{item.updatedAt ? moment(item.updatedAt).format('DD/MM/YYYY HH:mm') : "---"}</CTableDataCell>
                     </CTableRow>
                   ))}
                 </CTableBody>
